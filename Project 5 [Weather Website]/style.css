@@ -1,0 +1,196 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to right, #74ebd5, #acb6e5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 20px 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 400px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #444;
+    animation: slideInDown 1s ease-in-out;
+}
+
+#location-input {
+    margin-bottom: 20px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+#location-input input {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    margin-right: 10px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+#location-input input:focus {
+    border-color: #74ebd5;
+}
+
+#location-input button {
+    padding: 10px 15px;
+    background: #74ebd5;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#location-input button:hover {
+    background: #67d4c4;
+}
+
+#weather-info {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.weather-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: fadeInUp 1s ease-in-out;
+    position: relative;
+}
+
+.weather-card i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    display: block;
+    animation: iconFadeIn 1s ease-in-out;
+}
+
+.weather-card p {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInLeft {
+    from { transform: translateX(-50px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes iconFadeIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+/* Define background animations for different weather conditions */
+
+.sunny-bg {
+    background: linear-gradient(to right, #ffb347, #ffcc33);
+    animation: sunnyAnimation 10s infinite;
+}
+
+.rainy-bg {
+    background: linear-gradient(to right, #4b79a1, #283e51);
+    animation: rainyAnimation 10s infinite;
+}
+
+.snowy-bg {
+    background: linear-gradient(to right, #d3cce3, #e9e4f0);
+    animation: snowyAnimation 10s infinite;
+}
+
+.thunderstorm-bg {
+    background: linear-gradient(to right, #485563, #29323c);
+    animation: thunderstormAnimation 10s infinite;
+}
+
+.foggy-bg {
+    background: linear-gradient(to right, #d7d2cc, #304352);
+    animation: foggyAnimation 10s infinite;
+}
+
+.cloudy-bg {
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    animation: cloudyAnimation 10s infinite;
+}
+
+/* Keyframes for background animations */
+
+@keyframes sunnyAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rainyAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes snowyAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes thunderstormAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes foggyAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes cloudyAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+
+

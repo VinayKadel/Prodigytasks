@@ -1,0 +1,162 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #282c34;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em;
+}
+
+.mode-selection,
+.controls {
+    margin-bottom: 20px;
+}
+
+.mode-selection button,
+.controls button {
+    background-color: #61dafb;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mode-selection button:hover,
+.controls button:hover {
+    background-color: #21a1f1;
+    transform: scale(1.1);
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+    perspective: 1000px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border: 2px solid #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.cell:hover {
+    background-color: #61dafb;
+    /* transform: rotateY(180deg); */
+}
+
+.cell.x::before {
+    content: 'X';
+    color: red;
+    transition: color 0.3s ease;
+}
+
+.cell.o::before {
+    content: 'O';
+    color: blue;
+    transition: color 0.3s ease;
+}
+
+.winning-message {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 2em;
+    padding: 20px;
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.winning-message.show {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+.mode-selection {
+    display: flex;
+    gap: 10px;
+}
+
+.checkbox-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #007BFF;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkbox-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.checkbox-button:active {
+    background-color: #004080;
+    border-color: #004080;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+input[type="checkbox"]:checked + .checkbox-button {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+input[type="checkbox"]:checked + .checkbox-button:hover {
+    background-color: #218838;
+    border-color: #218838;
+}
+
+
+

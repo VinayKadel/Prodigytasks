@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Tic Tac Toe</h1>
+    <div class="mode-selection">
+        <input type="checkbox" id="playerVsPlayer" name="mode" value="PlayerVsPlayer">
+        <label for="playerVsPlayer" class="checkbox-button">Player vs Player</label>
+    
+        <input type="checkbox" id="playerVsComputer" name="mode" value="PlayerVsComputer">
+        <label for="playerVsComputer" class="checkbox-button">Player vs Computer</label>
+    </div>
+    
+    
+    <div class="scoreboard">
+        <div>Player X: <span id="playerXScore">0</span></div>
+        <div>Player O: <span id="playerOScore">0</span></div>
+    </div>
+    <div class="game-board" id="gameBoard">
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+        <div class="cell" data-cell></div>
+    </div>
+    <div class="controls">
+        <button id="restartButton">Restart</button>
+        <button id="resetScoresButton">Reset Scores</button>
+    </div>
+    <h2 class="winning-message" id="winningMessage">
+        <span id="winningMessageText"></span>
+    </h2>
+    <script src="script.js"></script>
+</body>
+</html>

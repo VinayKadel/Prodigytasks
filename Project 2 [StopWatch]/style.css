@@ -1,0 +1,117 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+:root {
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --button-bg: linear-gradient(135deg, #007bff, #0056b3);
+    --button-text: #fff;
+    --button-hover-bg: linear-gradient(135deg, #0056b3, #003f7f);
+    --lap-bg: #f9f9f9;
+    --lap-border: #ddd;
+}
+
+[data-theme="dark"] {
+    --background-color: #333;
+    --text-color: #f0f0f0;
+    --button-bg: linear-gradient(135deg, #0056b3, #003f7f);
+    --button-text: #fff;
+    --button-hover-bg: linear-gradient(135deg, #003f7f, #002b59);
+    --lap-bg: #555;
+    --lap-border: #888;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.stopwatch {
+    background-color: var(--background-color);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    align-self: center;
+}
+
+#display {
+    font-size: 4em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.controls button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.controls button:hover {
+    background: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    border-top: 2px solid var(--lap-border);
+    padding-top: 10px;
+}
+
+#laps li {
+    margin: 5px 0;
+    background-color: var(--lap-bg);
+    padding: 10px;
+    border: 1px solid var(--lap-border);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#theme-switcher {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background: var(--button-bg);
+    color: var(--button-text);
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#theme-switcher:hover {
+    background: var(--button-hover-bg);
+    transform: translateY(-2px);
+}
+
+.new{
+    display: flex;
+    flex-direction: column;
+}
